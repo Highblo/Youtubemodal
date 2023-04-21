@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+header {
+  background-color: black;
+  padding: 16px 0;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open, .close {
+  padding: 8px 16px;
+  background-color: aqua;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s;
+}
+
+.close {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.open:hover, .close:hover {
+  background-color: blue;
+}
+
+.modalContainer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modalContents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
