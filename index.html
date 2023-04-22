@@ -12,30 +12,19 @@
     <h1>Modalyoutube</h1>
   </header>
   <div class="container">
-    <button class="open">ここにyoutubeのサムネイル</button>
-    <div class="modalContainer">
+    <h1 class="title">Youtubeの埋め込み</h1>
+    <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/UM9XNpgrqVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div>
+      <h1 class="title">Youtubeをモーダルで表示する</h1>
+      <button class="open">ここにyoutubeのサムネイル</button>
+    </div>
+    <div class="modalOverlay">
       <div class="modalContents">
         <button class="close">閉じる</button>
-        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/yUxIv7YYXVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="player"></div>
       </div>
     </div>
   </div>
-  <script>
-    const modal = document.querySelector(".modalContainer");
-    const open = document.querySelector(".open");
-    const close = document.querySelector(".close");
-
-    open.addEventListener("click", () => {
-      modal.style.display = "block";
-    });
-
-    close.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

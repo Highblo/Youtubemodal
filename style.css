@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-direction: column; 
-  min-height: 100vh;
-}
-
 header {
   background-color: black;
   padding: 16px 0;
@@ -18,10 +12,16 @@ header {
 }
 
 .container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  margin-bottom: 12px;
+}
+
+.youtube {
+  margin-bottom: 40px;
 }
 
 .open, .close {
@@ -43,12 +43,20 @@ header {
   background-color: blue;
 }
 
-.modalContainer {
-  display: none;
+.modalOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  z-index: -10;
+  transition: opacity 0.3s;
 }
+
+.isOpen {
+  opacity: 1;
+  z-index: 100;
+}
+
 
 .modalContents {
   position: absolute;
