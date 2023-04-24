@@ -27,7 +27,7 @@ header {
 }
 
 .res {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   aspect-ratio: 16/9;
 }
@@ -89,14 +89,15 @@ header {
 
 @media(max-width: 768px) {
   .title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
-  .res, .modalContents {
-    width: 60%;
+  .modalContents {
+    width: 65%;
   }
   .container {
     flex-direction: column;
+    margin-top: 100px;
   }
   .open, .close {
     padding: 4px 8px;
