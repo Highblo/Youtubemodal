@@ -12,12 +12,24 @@ header {
 }
 
 .container {
+  margin-top: 250px;
   text-align: center;
-  margin-top: 100px;
+  display: flex;
+}
+
+.left, .right {
+  flex: 1;
 }
 
 .title {
+  font-size: 1.8rem;
   margin-bottom: 12px;
+}
+
+.res {
+  width: 50%;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
 }
 
 .youtube {
@@ -34,9 +46,13 @@ header {
   transition: all 0.3s;
 }
 
+.open {
+  margin-top: 3rem;
+}
+
 .close {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
 }
 
 .open:hover, .close:hover {
@@ -50,6 +66,9 @@ header {
   opacity: 0;
   z-index: -10;
   transition: opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .isOpen {
@@ -57,10 +76,29 @@ header {
   z-index: 100;
 }
 
+#player {
+  width: 100%;
+  height: 100%;
+}
+
 
 .modalContents {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 50%;
+  aspect-ratio: 16/9;
+}
+
+@media(max-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .res, .modalContents {
+    width: 60%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .open, .close {
+    padding: 4px 8px;
+  }
 }
