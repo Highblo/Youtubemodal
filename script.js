@@ -4,16 +4,17 @@ const close = document.querySelector(".close");
 
 open.addEventListener("click", () => {
   modal.classList.add("isOpen");
+  player.playVideo();
 });
 
 close.addEventListener("click", () => {
   modal.classList.remove("isOpen");
-  stopVideo();
+  player.stopVideo();
 });
 
 modal.addEventListener("click", () => {
   modal.classList.remove("isOpen");
-  stopVideo();
+  player.stopVideo();
 });
 
 const tag = document.createElement("script");
@@ -27,8 +28,4 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     videoId: 'cKlEE_EYuNM',
   });
-}
-
-const stopVideo = () => {
-  player.stopVideo();
 }
